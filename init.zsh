@@ -18,9 +18,14 @@ p6df::modules::zsh::deps()    {
 	)
 }
 
-p6df::modules::zsh::external::() {
+p6df::modules::zsh::external::brew() {
 
   brew install zsh
+  brew install zmap
+  brew install zshdb
+  brew install zssh
+  brew install zsync
+  brew install zpython
 }
 
 p6df::modules::zsh::init() {
