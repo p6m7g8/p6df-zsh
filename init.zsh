@@ -32,18 +32,12 @@ p6df::modules::zsh::external::brew() {
 p6df::modules::zsh::init() {
 
   p6df::modules::zsh::colors::init
-  p6df::modules::zsh::vcs::init
   p6df::modules::zsh::comp::init
 }
 
 p6df::modules::zsh::colors::init() {
 
   autoload -U colors && colors
-}
-
-p6df::modules::zsh::vcs::init() {
-
-  autoload -Uz vcs_info
 }
 
 p6df::modules::zsh::comp::init() {
