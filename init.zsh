@@ -16,6 +16,8 @@ p6df::modules::zsh::deps()    {
 #		jimeh/zsh-peco-history
 #		psprint/zsh-navigation-tools
 #		psprint/zsh-editing-workbench
+
+		zplug/zplug
 	)
 }
 
@@ -48,3 +50,8 @@ p6df::modules::zsh::comp::init() {
 }
 
 p6df::modules::zsh::init
+
+# zshr
+# zoff
+# zon
+
