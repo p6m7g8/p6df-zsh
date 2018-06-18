@@ -31,6 +31,11 @@ p6df::modules::zsh::external::brew() {
   brew install zpython
 }
 
+p6df::modules::zsh::home::symlink() {
+
+  # XXX: .zshenv .zshrc here or there?
+}
+
 p6df::modules::zsh::init() {
 
   p6df::modules::zsh::colors::init
