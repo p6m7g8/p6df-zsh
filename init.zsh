@@ -10,6 +10,7 @@ p6df::modules::zsh::deps()    {
 		zdharma/history-search-multi-word
 		zdharma/fast-syntax-highlighting
 
+		djui/alias-tips
 		sorin-ionescu/prezto:modules/history
 
 		robbyrussell/oh-my-zsh:lib/diagnostics
@@ -59,4 +60,3 @@ p6df::modules::zsh::init
 # zshr
 # zoff
 # zon
-
