@@ -55,8 +55,6 @@ p6df::modules::zsh::comp::init() {
   compinit -i -d ${ZDOTDIR}/.zcompdump
 }
 
-p6df::modules::zsh::init
-
 # zshr
 # zoff
 # zon
