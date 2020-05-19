@@ -39,8 +39,14 @@ p6df::modules::zsh::home::symlink() {
 
 p6df::modules::zsh::init() {
 
+  p6df::modules::zsh::hooks::init
   p6df::modules::zsh::colors::init
   p6df::modules::zsh::comp::init
+}
+
+p6df::modules::zsh::hooks::init() {
+
+  autoload -Uz add-zsh-hook
 }
 
 p6df::modules::zsh::colors::init() {
