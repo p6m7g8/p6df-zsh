@@ -6,5 +6,8 @@
 - p6df::modules::zsh::home::symlink()
 - p6df::modules::zsh::hooks::init()
 - p6df::modules::zsh::init()
+- p6df::modules::zsh::off()
+- p6df::modules::zsh::on()
+- p6df::modules::zsh::reload()
 - p6df::modules::zsh::version()
 
