@@ -17,7 +17,7 @@ p6df::modules::zsh::version() { echo "0.0.1" }
 p6df::modules::zsh::deps()    {
 	ModuleDeps=(
 		zsh-users/zsh-completions
-#		zsh-users/zsh-syntax-highlighting
+		zsh-users/zsh-syntax-highlighting
 		zsh-users/zsh-history-substring-search
 		zsh-users/zsh-autosuggestions
 
@@ -29,9 +29,9 @@ p6df::modules::zsh::deps()    {
 		sorin-ionescu/prezto:modules/history
 
 		robbyrussell/oh-my-zsh:lib/diagnostics
-#		jimeh/zsh-peco-history
-#		psprint/zsh-navigation-tools
-#		psprint/zsh-editing-workbench
+		# jimeh/zsh-peco-history
+		psprint/zsh-navigation-tools
+		psprint/zsh-editing-workbench
 
 		zplug/zplug
 	)
