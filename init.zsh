@@ -1,3 +1,4 @@
+# shellcheck shell=zsh
 ######################################################################
 #<
 #
@@ -110,13 +111,56 @@ p6df::modules::zsh::colors::init() {
 #
 #>
 ######################################################################
-p6df::modules::zsh::comp::init() {
+p6df::modules::zsh::comp::init() {``
 
   autoload -U compaudit compinit
   compaudit
   compinit -i -d ${ZDOTDIR}/.zcompdump
 }
 
-# zshr
-# zoff
-# zon
+######################################################################
+#<
+#
+# Function: p6df::modules::zsh::off()
+#
+#>
+######################################################################
+p6df::modules::zsh::off() {
+
+  p6_file_unlink "${ZDOTDIR}/.zshrc"
+  p6_file_unlink "${ZDOTDIR}/.zshenv"
+  p6_file_create "${ZDOTDIR}/.zshrc"
+
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::zsh::on()
+#
+#>
+######################################################################
+p6df::modules::zsh::on() {
+
+  p6_file_remove "${ZDOTDIR}/.zshrc"
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DIR/p6df-core/conf/zshrc" "${ZDOTDIR}/.zshrc"
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DIR/p6df-core/conf/zshenv" "${ZDOTDIR}/.zshenv"
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::zsh::reload()
+#
+#>
+######################################################################
+p6df::modules::zsh::reload() {
+
+  local pair 
+  for pair in $(p6_env_list | grep -Ev "^PATH=|P6_DFZ_MODULES|MYSQL_PS1"); do
+    local k=$(echo $pair | awk -F= '{print $1}')
+    p6_env_export_un "$k"
+  done
+
+  exec zsh -li
+}
