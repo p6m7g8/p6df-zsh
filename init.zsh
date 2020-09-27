@@ -28,7 +28,7 @@ p6df::modules::zsh::deps()    {
 		djui/alias-tips
 		sorin-ionescu/prezto:modules/history
 
-		robbyrussell/oh-my-zsh:lib/diagnostics
+		ohmyzsh/ohmyzsh:lib/diagnostics
 		# jimeh/zsh-peco-history
 		psprint/zsh-navigation-tools
 		psprint/zsh-editing-workbench
