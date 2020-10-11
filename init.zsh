@@ -7,6 +7,7 @@
 #>
 ######################################################################
 p6df::modules::zsh::version() { echo "0.0.1" }
+
 ######################################################################
 #<
 #
@@ -14,8 +15,10 @@ p6df::modules::zsh::version() { echo "0.0.1" }
 #
 #>
 ######################################################################
-p6df::modules::zsh::deps()    {
+p6df::modules::zsh::deps() {
 	ModuleDeps=(
+    p6m7g8/p6common
+
 		zsh-users/zsh-completions
 		zsh-users/zsh-syntax-highlighting
 		zsh-users/zsh-history-substring-search
@@ -163,4 +166,42 @@ p6df::modules::zsh::reload() {
   done
 
   exec zsh -li
+}
+
+######################################################################
+#<
+#
+# Function: str info = p6df::modules::zsh::prompt::std()
+#
+#  Returns:
+#	str - info
+#
+#>
+######################################################################
+p6df::modules::zsh::prompt::std() {
+
+  local tty=$fg[cyan]%l$reset_color
+  local user=$fg[blue]%n$reset_color
+  local host=$fg[yellow]%M$reset_color
+
+  local info="[$tty]$user@$host rv=%?"
+
+  p6_return_str "$info"
+}
+
+######################################################################
+#<
+#
+# Function: str dir = p6df::modules::zsh::prompt::dir()
+#
+#  Returns:
+#	str - dir
+#
+#>
+######################################################################
+p6df::modules::zsh::prompt::dir() {
+
+  local dir=$fg[green]%/$reset_color
+
+  p6_return_str "$dir"
 }
