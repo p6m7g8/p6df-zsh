@@ -9,7 +9,6 @@
 - p6df::modules::zsh::off()
 - p6df::modules::zsh::on()
 - p6df::modules::zsh::reload()
-- p6df::modules::zsh::version()
 - str dir = p6df::modules::zsh::prompt::dir()
 - str info = p6df::modules::zsh::prompt::std()
 
