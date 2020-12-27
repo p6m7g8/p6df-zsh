@@ -69,6 +69,7 @@ p6df::modules::zsh::home::symlink() {
 ######################################################################
 p6df::modules::zsh::init() {
 
+  p6df::util::cdpath::if "$P6_DFZ_SRC_DIR/ohmyzsh/ohmyzsh/plugins"
   p6df::modules::zsh::hooks::init
   p6df::modules::zsh::colors::init
   p6df::modules::zsh::comp::init
