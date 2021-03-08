@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-zsh:
+
+#### p6df-zsh/init.zsh:
 
 - p6df::modules::zsh::colors::init()
 - p6df::modules::zsh::comp::init()
