@@ -51,18 +51,6 @@ p6df::modules::zsh::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::zsh::home::symlink()
-#
-#>
-######################################################################
-p6df::modules::zsh::home::symlink() {
-
-  # XXX: .zshenv .zshrc here or there?
-}
-
-######################################################################
-#<
-#
 # Function: p6df::modules::zsh::init()
 #
 #>
