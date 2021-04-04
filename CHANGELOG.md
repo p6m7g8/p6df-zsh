@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-zsh/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+### Features
+
+* **cdpath:** adds plugins/ ([805c49b](https://github.com/p6m7g8/p6df-zsh/commit/805c49bd947396c5acc14b198840f55cb33059e2))
+
+
+* **README:** updates generator ([#16](https://github.com/p6m7g8/p6df-zsh/issues/16)) ([6228208](https://github.com/p6m7g8/p6df-zsh/commit/62282089d436b5e654a13d521c14be972b4813b6))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-zsh/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
