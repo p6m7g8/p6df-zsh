@@ -20,7 +20,6 @@ p6df::modules::zsh::deps() {
 		zdharma/history-search-multi-word
 		zdharma/fast-syntax-highlighting
 
-		djui/alias-tips
 		sorin-ionescu/prezto:modules/history
 
 		ohmyzsh/ohmyzsh:lib/diagnostics
@@ -30,6 +29,18 @@ p6df::modules::zsh::deps() {
 
 		zplug/zplug
 	)
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::zsh::external::yum()
+#
+#>
+######################################################################
+p6df::modules::zsh::external::yum() {
+
+  sudo yum install zsh
 }
 
 ######################################################################
@@ -53,6 +64,7 @@ p6df::modules::zsh::external::brew() {
 #
 # Function: p6df::modules::zsh::home::symlink()
 #
+#  Environment:	 XXX
 #>
 ######################################################################
 p6df::modules::zsh::home::symlink() {
@@ -65,6 +77,7 @@ p6df::modules::zsh::home::symlink() {
 #
 # Function: p6df::modules::zsh::init()
 #
+#  Environment:	 P6_DFZ_SRC_DIR
 #>
 ######################################################################
 p6df::modules::zsh::init() {
@@ -104,6 +117,7 @@ p6df::modules::zsh::colors::init() {
 #
 # Function: p6df::modules::zsh::comp::init()
 #
+#  Environment:	 ZDOTDIR
 #>
 ######################################################################
 p6df::modules::zsh::comp::init() {``
@@ -118,6 +132,8 @@ p6df::modules::zsh::comp::init() {``
 #
 # Function: p6df::modules::zsh::off()
 #
+#  Depends:	 p6_file
+#  Environment:	 ZDOTDIR
 #>
 ######################################################################
 p6df::modules::zsh::off() {
@@ -133,6 +149,8 @@ p6df::modules::zsh::off() {
 #
 # Function: p6df::modules::zsh::on()
 #
+#  Depends:	 p6_file
+#  Environment:	 P6_DFZ_SRC_P6M7G8_DIR ZDOTDIR
 #>
 ######################################################################
 p6df::modules::zsh::on() {
@@ -147,6 +165,8 @@ p6df::modules::zsh::on() {
 #
 # Function: p6df::modules::zsh::reload()
 #
+#  Depends:	 p6_env
+#  Environment:	 PATH
 #>
 ######################################################################
 p6df::modules::zsh::reload() {
